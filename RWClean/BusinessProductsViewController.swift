@@ -50,7 +50,7 @@ public class BusinessProductsViewController: UIViewController {
     }
   }
   
-  internal func loadProducts() {
+    @objc internal func loadProducts() {
     collectionView.refreshControl?.beginRefreshing()
     let url = URL(string: "https://rwcleanbackend.herokuapp.com/products/business")!
     let task = session.dataTask(with: url, completionHandler: { (data, response, error) in

@@ -57,7 +57,7 @@ extension WelcomePageViewController: UIPageViewControllerDataSource {
   
   public func pageViewController(_ pageViewController: UIPageViewController,
                                  viewControllerBefore viewController: UIViewController) -> UIViewController? {
-    guard let currentIndex = childPages.index(of: viewController), currentIndex > 0 else {
+    guard let currentIndex = childPages.firstIndex(of: viewController), currentIndex > 0 else {
       return nil
     }
     return childPages[currentIndex - 1]
@@ -65,7 +65,7 @@ extension WelcomePageViewController: UIPageViewControllerDataSource {
   
   public func pageViewController(_ pageViewController: UIPageViewController,
                                  viewControllerAfter viewController: UIViewController) -> UIViewController? {
-    guard let currentIndex = childPages.index(of: viewController),
+    guard let currentIndex = childPages.firstIndex(of: viewController),
       currentIndex < (childPages.count - 1) else { return nil }
     return childPages[currentIndex + 1]
   }

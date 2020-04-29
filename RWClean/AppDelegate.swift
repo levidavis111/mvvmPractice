@@ -36,7 +36,7 @@ public final class AppDelegate: UIResponder, UIApplicationDelegate {
   public var window: UIWindow?
 
   public func application(_ application: UIApplication,
-                          didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+                          didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     configureRootViewController()
     return true
   }
