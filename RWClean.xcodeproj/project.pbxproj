@@ -44,6 +44,12 @@
 		42F84AB61E6950280029C1E6 /* HomeProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F84AB51E6950280029C1E6 /* HomeProductsViewController.swift */; };
 		42F84AB81E6950350029C1E6 /* BusinessProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F84AB71E6950350029C1E6 /* BusinessProductsViewController.swift */; };
 		42F84ABF1E6953120029C1E6 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F84ABE1E6953120029C1E6 /* ProductCollectionViewCell.swift */; };
+		FC2B5935245A202F002305B0 /* CleaningServicesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2B5934245A202F002305B0 /* CleaningServicesBuilder.swift */; };
+		FC2B5937245A205C002305B0 /* HomeInfoBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2B5936245A205B002305B0 /* HomeInfoBuilder.swift */; };
+		FC2B5939245A2118002305B0 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2B5938245A2118002305B0 /* NetworkClient.swift */; };
+		FC2B593C245A213F002305B0 /* Int+HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2B593A245A213F002305B0 /* Int+HTTPStatusCode.swift */; };
+		FC2B593D245A213F002305B0 /* UIImageView+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2B593B245A213F002305B0 /* UIImageView+URL.swift */; };
+		FC2B593F245A2149002305B0 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2B593E245A2149002305B0 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +93,12 @@
 		42F84AB51E6950280029C1E6 /* HomeProductsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeProductsViewController.swift; sourceTree = "<group>"; };
 		42F84AB71E6950350029C1E6 /* BusinessProductsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessProductsViewController.swift; sourceTree = "<group>"; };
 		42F84ABE1E6953120029C1E6 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		FC2B5934245A202F002305B0 /* CleaningServicesBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CleaningServicesBuilder.swift; sourceTree = "<group>"; };
+		FC2B5936245A205B002305B0 /* HomeInfoBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeInfoBuilder.swift; sourceTree = "<group>"; };
+		FC2B5938245A2118002305B0 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		FC2B593A245A213F002305B0 /* Int+HTTPStatusCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+HTTPStatusCode.swift"; sourceTree = "<group>"; };
+		FC2B593B245A213F002305B0 /* UIImageView+URL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+URL.swift"; sourceTree = "<group>"; };
+		FC2B593E245A2149002305B0 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +143,7 @@
 				422FEA731E67608200AFDC41 /* App */,
 				FC2B5926245A0DEA002305B0 /* Cleaning Services */,
 				FC2B5927245A0DFF002305B0 /* Home Info */,
+				FC2B5931245A1F05002305B0 /* Networking */,
 				FC2B5924245A0DDC002305B0 /* Theme */,
 				FC2B5925245A0DE3002305B0 /* Welcome */,
 			);
@@ -256,6 +269,7 @@
 		FC2B5926245A0DEA002305B0 /* Cleaning Services */ = {
 			isa = PBXGroup;
 			children = (
+				FC2B5934245A202F002305B0 /* CleaningServicesBuilder.swift */,
 				42C0F5D21EB7AE8800C6EBAB /* Controllers */,
 				FC2B5928245A0F47002305B0 /* Models */,
 				FC2B592A245A0F9E002305B0 /* Resources */,
@@ -267,6 +281,7 @@
 		FC2B5927245A0DFF002305B0 /* Home Info */ = {
 			isa = PBXGroup;
 			children = (
+				FC2B5936245A205B002305B0 /* HomeInfoBuilder.swift */,
 				42F860161E6F20E50078A995 /* Controllers */,
 				FC2B5929245A0F56002305B0 /* Models */,
 				FC2B592B245A0FB5002305B0 /* Resources */,
@@ -354,6 +369,33 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		FC2B5931245A1F05002305B0 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				FC2B5938245A2118002305B0 /* NetworkClient.swift */,
+				FC2B5933245A1F1B002305B0 /* Extensions */,
+				FC2B5932245A1F18002305B0 /* Models */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		FC2B5932245A1F18002305B0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FC2B593E245A2149002305B0 /* NetworkError.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		FC2B5933245A1F1B002305B0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FC2B593A245A213F002305B0 /* Int+HTTPStatusCode.swift */,
+				FC2B593B245A213F002305B0 /* UIImageView+URL.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -435,9 +477,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				422FEA8C1E676B4D00AFDC41 /* BathroomCountViewController.swift in Sources */,
+				FC2B593F245A2149002305B0 /* NetworkError.swift in Sources */,
 				428766A41E69344E001D72E5 /* CleaningServicesTableViewController.swift in Sources */,
 				429ECFBD1E744DA3000E6A8C /* LoadingHUD.swift in Sources */,
 				42F164DF1E6C494400B90E22 /* MenuTableViewController.swift in Sources */,
+				FC2B593C245A213F002305B0 /* Int+HTTPStatusCode.swift in Sources */,
+				FC2B5937245A205C002305B0 /* HomeInfoBuilder.swift in Sources */,
 				422FEA5F1E675E8800AFDC41 /* WelcomeViewController.swift in Sources */,
 				421BD42B1E68C98B002F1F3C /* ReviewHomeInfoViewController.swift in Sources */,
 				422FEA5D1E675E8800AFDC41 /* AppDelegate.swift in Sources */,
@@ -447,7 +492,9 @@
 				429ECFC01E744DB9000E6A8C /* UIViewController+LoadingHUD.swift in Sources */,
 				420B9B541E68D61000972DA3 /* WelcomePageViewController.swift in Sources */,
 				42F84ABF1E6953120029C1E6 /* ProductCollectionViewCell.swift in Sources */,
+				FC2B593D245A213F002305B0 /* UIImageView+URL.swift in Sources */,
 				4276FCB61EB3E629004E96B9 /* ParentPushSegue.swift in Sources */,
+				FC2B5935245A202F002305B0 /* CleaningServicesBuilder.swift in Sources */,
 				422FEA8E1E676B6200AFDC41 /* KitchenSizeViewController.swift in Sources */,
 				42F162C01E6C382C00B90E22 /* CollectionViewCenterFlowLayout.swift in Sources */,
 				422FEA881E67687100AFDC41 /* HomeInfo.swift in Sources */,
@@ -458,6 +505,7 @@
 				422FEA831E6767EB00AFDC41 /* BedroomCountViewController.swift in Sources */,
 				42F84AB81E6950350029C1E6 /* BusinessProductsViewController.swift in Sources */,
 				422FEA901E676B6D00AFDC41 /* OtherRoomCountViewController.swift in Sources */,
+				FC2B5939245A2118002305B0 /* NetworkClient.swift in Sources */,
 				4276FCB71EB3E629004E96B9 /* SetNavigationRootSegue.swift in Sources */,
 				421139E11E6BCB6D00A057BF /* Product.swift in Sources */,
 			);
