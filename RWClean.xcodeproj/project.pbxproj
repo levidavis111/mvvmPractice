@@ -129,7 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				422FEA731E67608200AFDC41 /* App */,
-				FC2B5926245A0DEA002305B0 /* Cleaning */,
+				FC2B5926245A0DEA002305B0 /* Cleaning Services */,
 				FC2B5927245A0DFF002305B0 /* Home Info */,
 				FC2B5924245A0DDC002305B0 /* Theme */,
 				FC2B5925245A0DE3002305B0 /* Welcome */,
@@ -142,7 +142,6 @@
 			children = (
 				422FEA741E6766B100AFDC41 /* AppDelegate */,
 				42F164DB1E6C492900B90E22 /* Controllers */,
-				42F860151E6F20C30078A995 /* Models */,
 				422FEA751E6766B700AFDC41 /* Resources */,
 				422FEA771E6766DC00AFDC41 /* Supporting Files */,
 				422FEA761E6766C300AFDC41 /* Views */,
@@ -162,9 +161,6 @@
 			isa = PBXGroup;
 			children = (
 				422FEA631E675E8800AFDC41 /* Assets.xcassets */,
-				4287669E1E693415001D72E5 /* CleaningServices.xcassets */,
-				422FEA801E6767B000AFDC41 /* HomeInfoBuilder.xcassets */,
-				422FEA781E6766FB00AFDC41 /* Welcome.xcassets */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -172,18 +168,8 @@
 		422FEA761E6766C300AFDC41 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				428766A51E6934C9001D72E5 /* CleaningServices.storyboard */,
-				42F162BF1E6C382C00B90E22 /* CollectionViewCenterFlowLayout.swift */,
-				422FEA841E67683500AFDC41 /* HomeInfoBuilder.storyboard */,
 				422FEA651E675E8800AFDC41 /* LaunchScreen.storyboard */,
-				429ECFBB1E744DA3000E6A8C /* LoadingHUD.swift */,
-				429ECFBC1E744DA3000E6A8C /* LoadingHUD.xib */,
 				42F164D91E6C48D600B90E22 /* Main.storyboard */,
-				4276FCB41EB3E629004E96B9 /* ParentPushSegue.swift */,
-				42F84ABE1E6953120029C1E6 /* ProductCollectionViewCell.swift */,
-				4276FCB51EB3E629004E96B9 /* SetNavigationRootSegue.swift */,
-				429ECFBF1E744DB9000E6A8C /* UIViewController+LoadingHUD.swift */,
-				422FEA601E675E8800AFDC41 /* Welcome.storyboard */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -208,7 +194,7 @@
 			name = RoomCountViewControllers;
 			sourceTree = "<group>";
 		};
-		42C0F5D21EB7AE8800C6EBAB /* Cleaning Services */ = {
+		42C0F5D21EB7AE8800C6EBAB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				42F84AB71E6950350029C1E6 /* BusinessProductsViewController.swift */,
@@ -216,31 +202,18 @@
 				42F84AB51E6950280029C1E6 /* HomeProductsViewController.swift */,
 				42F164E01E6C55C200B90E22 /* ProductDetailsViewController.swift */,
 			);
-			name = "Cleaning Services";
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		42F164DB1E6C492900B90E22 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				42C0F5D21EB7AE8800C6EBAB /* Cleaning Services */,
-				42F860161E6F20E50078A995 /* Home Info */,
-				42F860171E6F21260078A995 /* Welcome */,
 				42F164DE1E6C494400B90E22 /* MenuTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
 		};
-		42F860151E6F20C30078A995 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				422FEA871E67687100AFDC41 /* HomeInfo.swift */,
-				421139E01E6BCB6D00A057BF /* Product.swift */,
-				421BD4281E68A887002F1F3C /* RoomSize.swift */,
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
-		42F860161E6F20E50078A995 /* Home Info */ = {
+		42F860161E6F20E50078A995 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				421BD4251E68A3A8002F1F3C /* Base */,
@@ -250,21 +223,22 @@
 				421BD42A1E68C98B002F1F3C /* ReviewHomeInfoViewController.swift */,
 				4276FCB21EB3E1DE004E96B9 /* StartHomeInfoViewController.swift */,
 			);
-			name = "Home Info";
+			name = Controllers;
 			sourceTree = "<group>";
 		};
-		42F860171E6F21260078A995 /* Welcome */ = {
+		42F860171E6F21260078A995 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				420B9B531E68D61000972DA3 /* WelcomePageViewController.swift */,
 				422FEA5E1E675E8800AFDC41 /* WelcomeViewController.swift */,
 			);
-			name = Welcome;
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		FC2B5924245A0DDC002305B0 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
+				FC2B592F245A104B002305B0 /* Views */,
 			);
 			name = Theme;
 			sourceTree = "<group>";
@@ -272,22 +246,112 @@
 		FC2B5925245A0DE3002305B0 /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
+				42F860171E6F21260078A995 /* Controllers */,
+				FC2B592C245A0FC3002305B0 /* Resources */,
+				FC2B5930245A1081002305B0 /* Views */,
 			);
 			name = Welcome;
 			sourceTree = "<group>";
 		};
-		FC2B5926245A0DEA002305B0 /* Cleaning */ = {
+		FC2B5926245A0DEA002305B0 /* Cleaning Services */ = {
 			isa = PBXGroup;
 			children = (
+				42C0F5D21EB7AE8800C6EBAB /* Controllers */,
+				FC2B5928245A0F47002305B0 /* Models */,
+				FC2B592A245A0F9E002305B0 /* Resources */,
+				FC2B592D245A1018002305B0 /* Views */,
 			);
-			name = Cleaning;
+			name = "Cleaning Services";
 			sourceTree = "<group>";
 		};
 		FC2B5927245A0DFF002305B0 /* Home Info */ = {
 			isa = PBXGroup;
 			children = (
+				42F860161E6F20E50078A995 /* Controllers */,
+				FC2B5929245A0F56002305B0 /* Models */,
+				FC2B592B245A0FB5002305B0 /* Resources */,
+				FC2B592E245A1029002305B0 /* Views */,
 			);
 			name = "Home Info";
+			sourceTree = "<group>";
+		};
+		FC2B5928245A0F47002305B0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				421139E01E6BCB6D00A057BF /* Product.swift */,
+				421BD4281E68A887002F1F3C /* RoomSize.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		FC2B5929245A0F56002305B0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				422FEA871E67687100AFDC41 /* HomeInfo.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		FC2B592A245A0F9E002305B0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4287669E1E693415001D72E5 /* CleaningServices.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		FC2B592B245A0FB5002305B0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				422FEA801E6767B000AFDC41 /* HomeInfoBuilder.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		FC2B592C245A0FC3002305B0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				422FEA781E6766FB00AFDC41 /* Welcome.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		FC2B592D245A1018002305B0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				428766A51E6934C9001D72E5 /* CleaningServices.storyboard */,
+				42F162BF1E6C382C00B90E22 /* CollectionViewCenterFlowLayout.swift */,
+				42F84ABE1E6953120029C1E6 /* ProductCollectionViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		FC2B592E245A1029002305B0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				422FEA841E67683500AFDC41 /* HomeInfoBuilder.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		FC2B592F245A104B002305B0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				429ECFBB1E744DA3000E6A8C /* LoadingHUD.swift */,
+				429ECFBC1E744DA3000E6A8C /* LoadingHUD.xib */,
+				4276FCB41EB3E629004E96B9 /* ParentPushSegue.swift */,
+				4276FCB51EB3E629004E96B9 /* SetNavigationRootSegue.swift */,
+				429ECFBF1E744DB9000E6A8C /* UIViewController+LoadingHUD.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		FC2B5930245A1081002305B0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				422FEA601E675E8800AFDC41 /* Welcome.storyboard */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
