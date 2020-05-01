@@ -33,7 +33,7 @@ import UIKit
 public class ProductDetailsViewController: UIViewController {
   
   // MARK: - Injections
-  public var product: Product!
+  public var productViewModel: ProductViewModel!
   
   // MARK: - Outlets
   @IBOutlet var descriptionLabel: UILabel!
@@ -42,31 +42,29 @@ public class ProductDetailsViewController: UIViewController {
   
   // MARK: - View Lifecycle
   public override func viewDidLoad() {
-    super.viewDidLoad()
-    
-    descriptionLabel.text = product.productDescription
-    
-    let numberFormatter = NumberFormatter()
-    numberFormatter.locale = Locale(identifier: "en_US")
-    numberFormatter.numberStyle = .currency
-    
-    if product.priceHourly > 0 {
-      let price = numberFormatter.string(from: product.priceHourly as NSNumber)!
-      priceLabel.text = "Only \(price) / hour"
-      
-    } else if product.priceSquareFoot > 0 {
-      let price500SqFt = product.priceSquareFoot * 500
-      let price = numberFormatter.string(from: price500SqFt as NSNumber)!
-      priceLabel.text = "\(price) / 500 ft²"
-    } else {
-      priceLabel.text = "Contact Us For Pricing"
-    }
-    descriptionLabel.text = product.productDescription
+    super.viewDidLoad()    
+    productViewModel.configure(self)
   }
   
   // MARK: - Actions
   
   @IBAction func makeReservationPressed(_ sender: Any) {
     
+  }
+}
+
+// MARK: - ProductViewModelView
+extension ProductDetailsViewController: ProductViewModelView {
+  
+  public var productImageView: UIImageView {
+    return imageView
+  }
+  
+  public var productPriceLabel: UILabel {
+    return priceLabel
+  }
+  
+  public var productDescriptionLabel: UILabel {
+    return descriptionLabel
   }
 }
